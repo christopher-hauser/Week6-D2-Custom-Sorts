@@ -55,6 +55,7 @@ function frequencySort(arr) {
 
 function ageSort(users) {
   // Fill this in
+  return users.sort((a,b) => a.age - b.age)
 }
 
 module.exports = [oddEvenSort, validAnagrams, reverseBaseSort,
