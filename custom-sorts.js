@@ -41,7 +41,16 @@ function reverseBaseSort(arr) {
 }
 
 function frequencySort(arr) {
-  
+
+  let obj = {};
+  for(let i = 0; i < arr.length; i++){
+    let num = arr[i];
+    if (!obj[num]) obj[num] = 1;
+    else obj[num] += 1;
+  }
+  return arr.sort((a,b) =>{
+    return (obj[a] - obj[b]) || b-a
+  })
 }
 
 function ageSort(users) {
